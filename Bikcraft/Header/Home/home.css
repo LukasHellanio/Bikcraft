@@ -1,0 +1,110 @@
+.introduction {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  text-align: right;
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  align-content: center;
+  justify-items: end;
+}
+
+.introduction h1 {
+  font-size: 2rem;
+}
+
+.introduction::before {
+  content: "";
+  width: 3.75rem;
+  height: 0.25rem;
+  background: #e21;
+  position: absolute;
+  top: 1.875rem;
+  right: -1.875rem;
+}
+
+.introduction-image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.caption {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: right;
+  padding: 2.5rem;
+  align-self: center;
+  background-image: url("/img/onda.svg");
+}
+
+.benefits {
+  background: #fff;
+  padding: 2.5rem;
+}
+
+.benefits-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.625rem 1.25rem;
+  padding: 1.25rem;
+}
+
+.benefits-item:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+.benefits-item:hover {
+  border-left: 0.25rem solid #e21;
+}
+
+.benefits-item p {
+  grid-column: 2;
+}
+
+@media (max-width: 1000px) {
+  .content-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .caption {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .introduction {
+    text-align: left;
+    justify-content: start;
+    font-size: 1.7rem;
+  }
+
+  .introduction h1 {
+    font-size: 1.7rem;
+  }
+
+  .introduction::before {
+    display: none;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+
+  .caption {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .introduction h1 {
+    font-size: 1.5rem;
+  }
+  .caption {
+    font-size: 2rem;
+  }
+}

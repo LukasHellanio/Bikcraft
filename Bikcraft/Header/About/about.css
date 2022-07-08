@@ -1,0 +1,28 @@
+.card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  text-align: right;
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  align-content: center;
+  justify-items: end;
+  margin: 0.313rem;
+}
+
+.card:nth-of-type(odd)::before {
+  content: "";
+  width: 3.75rem;
+  height: 0.25rem;
+  background: #e21;
+  position: absolute;
+  top: 1.875rem;
+  right: -1.875rem;
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .card::before {
+    display: none;
+  }
+}

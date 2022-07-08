@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./General-style/import.css" />
+    <title>Bikcraft</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="./img/bikcraft.svg" alt="Bikcraft" />
+
+    <nav class="navbar container">
+      <a href="#" class="logo">Menu</a>
+      <!-- The order that we place the checkbox and label here is important because we will use css only for the click event to open the menu on mobile. -->
+      <input type="checkbox" id="toggler" />
+      <label for="toggler"><i class="ri-menu-line"></i></label>
+      <div class="menu">
+        <ul class="list">
+          <li><a id="home" data-to="/Header/Home/home.html">HOME</a></li>
+          <li><a data-to="/Header/About/about.html">ABOUT</a></li>
+          <li>
+            <a data-to="/Header/Products/products.html">PRODUCTS</a>
+          </li>
+          <li><a data-to="/Header/Shops/shops.html">SHOPS</a></li>
+          <li>
+            <a data-to="/Header/Contacts/contacts.html">CONTACTS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="body">
+    </main>
+
+    <footer class="baseboard">
+      <div class="icons">
+        <a href="#" class="icon icon--instagram">
+          <i class="ri-instagram-line"></i>
+        </a>
+        <a href="#" class="icon icon--twitter">
+          <i class="ri-twitter-line"></i>
+        </a>
+        <a href="#" class="icon icon--linkedin">
+          <i class="ri-linkedin-line"></i>
+        </a>
+        <a href="#" class="icon icon--github">
+          <i class="ri-github-line"></i>
+        </a>
+      </div>
+      <p>Bikcraft. Alguns Direitos Reservados.</p>
+    </footer>
+  </body>
+</html>
+
+<script>
+  document.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function (event) {
+      const el = event.target || event.srcElement;
+      const to = el.getAttribute("data-to");
+      $("#body").load(to);
+ 
+    });
+  });
+  
+  if(!document.getElementById("body").innerText){
+    $("#body").load("Header/Home/home.html");
+  }
+</script>
