@@ -1,7 +1,7 @@
 <h1 align="center">BIKCREAFT Landing Page</h1>
 
 <h1 align="center">
-  <img src="./.github/preview.png" alt="Preview" width="100%" style="border-radius: 3px" /><br />
+  <img src="Bikcraft/.github/preview.png" alt="Preview" width="100%" style="border-radius: 3px" /><br />
 </h1>
 
 
