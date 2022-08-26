@@ -1,9 +1,9 @@
 /* general style sheet Import */
-@import "/General-style/button.css";
-@import "/General-style/menu.css";
-@import "/General-style/social-media.css";
+@import "./button.css";
+@import "./menu.css";
+@import "./social-media.css";
 
 /* style page imports*/
-@import "/Header/Home/home.css";
-@import "/Header/About/about.css";
-@import "/Header/Contacts/contacts.css";
+@import "../Header/Home/home.css";
+@import "../Header/About/about.css";
+@import "../Header/Contacts/contacts.css";
